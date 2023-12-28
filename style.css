@@ -1,32 +1,195 @@
-h1 {
-  font-size: 40px;
+* {
+  /* border: 5px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto; /* shorthand margin top/bottom == 0 and left/right ==same size */
+}
+
+body {
   font-family: sans-serif;
+  color: #444;
+  border-top: 20px solid #1098ad;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  /* border: 5px solid #1098ad; */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* border-left: 5px solid #1098ad;
+  border-right: 5px solid #1098ad; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding: 50px 0px;
+}
+
+.article-section {
+  margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h3 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+h1 {
+  /* background-color: rgba(0, 255, 255, 0.8); RGBA NOTATION*/
+  /* background-color: #00ffff;  HEXADECIMAL  NOTATION  also can use shorthand #0ff in case when color reprecented with duplicated letters*/
+  font-size: 30px;
   text-transform: uppercase;
   font-style: italic;
 }
 
-h3 {
-  font-size: 30px;
-  font-family: sans-serif;
+.article-title {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.article-header {
+  margin-bottom: 40px;
 }
 
 h4 {
   font-size: 27px;
-  font-family: sans-serif;
   text-align: center;
+  text-transform: uppercase;
 }
 
 p {
   font-size: 22px;
-  font-family: sans-serif;
   line-height: 1.5;
-}
-
-footer {
-  text-align: center;
+  margin-bottom: 15px;
 }
 
 li {
+  margin-bottom: 10px;
   font-size: 20px;
-  font-family: sans-serif;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+#copyright {
+  font-size: 16px;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+p.relatedPostBy {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+li.related-posts-list {
+  list-style: none;
+}
+
+/*PSEUDO CLASSES*/
+li:first-child {
+  /*first element of each list will be bold*/
+  /* font-weight: bold; */
+}
+
+li:last-child {
+  /*last element of each list will be italic*/
+  margin-bottom: 0;
+}
+
+li:nth-child(2) {
+  /* second element of each list will be red*/
+  /* color: red; */
+}
+
+/* Styling hyperlinks */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: orangered;
+}
+
+a:active {
+  color: #1098ad;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.related-post-title {
+  color: #1098ad;
+  font-style: bold;
+}
+
+.mdn-web-docs {
+  color: #1098ad;
+  font-style: bold;
+}
+
+/* css conflicta = multiple stylings applied to the same element */
+footer p {
+  color: greenyellow; /*P4*/
+}
+
+#copyright {
+  color: #444; /*P1*/
+}
+
+.copyright {
+  color: purple; /*P3*/
+}
+
+.footer {
+  /* color: red !important; P0 but its not a good practice to use it */
+}
+
+.footer {
+  color: purple; /*P2 last code line has priority*/
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
 }
