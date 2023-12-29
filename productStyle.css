@@ -11,6 +11,20 @@
   line-height: 1.4;
 }
 
+.product-title::after {
+  content: "SALE";
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 10px;
+  vertical-align: middle;
+
+  display: inline-block;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
 .product-title {
   background-color: #f7f7f7;
   text-align: center;
@@ -19,6 +33,7 @@
   padding-top: 10px;
   height: 40px;
   font-weight: bold;
+  position: relative;
 }
 
 .price {
@@ -36,7 +51,7 @@
 }
 
 .adv-text {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .more-info:link,
@@ -53,11 +68,68 @@
 
 /* PRODUCT DETAILS SECTION */
 .product-description-title {
-  margin-top: 10px;
+  margin-top: 70px;
   font-size: 15px;
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
+  position: relative;
+}
+
+.colors {
+  margin-top: 20px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.black-box {
+  background-color: black;
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.blue-box {
+  background-color: blue;
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+.red-box {
+  background-color: red;
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 60px;
+}
+.yellow-box {
+  background-color: rgb(223, 223, 0);
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 90px;
+}
+.green-box {
+  background-color: rgb(116, 192, 3);
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 120px;
+}
+.brown-box {
+  background-color: brown;
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0px;
+  left: 150px;
 }
 
 .description-list {
