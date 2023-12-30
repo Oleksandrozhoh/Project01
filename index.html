@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="main-header">
+      <header class="main-header clearfix">
         <h1>📘 The Code Magazine</h1>
         <nav>
           <a href="blog.html" class="nav-link">Blog &nbsp;</a>
@@ -15,6 +15,7 @@
           <a href="blog.html" class="nav-link">Flexbox &nbsp;</a>
           <a href="blog.html" class="nav-link">CSS Grid</a>
         </nav>
+        <div class="clear"></div>
       </header>
 
       <article class="article-section">
@@ -26,9 +27,10 @@
             height="50"
             width="50"
             alt="authorPicture"
+            class="author-img"
           />
 
-          <p id="author">
+          <p id="author" class="author">
             Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
           </p>
           <img
@@ -105,7 +107,7 @@
         <p>Hopefully you learned something new here. See you next time!</p>
       </article>
       <aside class="aside-section">
-        <h4>Related posts</h4>
+        <h4 class="related-post-header">Related posts</h4>
         <ul>
           <li class="related-posts-list">
             <img
@@ -142,7 +144,7 @@
         </ul>
         <button class="like-btn">👍Like</button>
       </aside>
-      <footer>
+      <footer class="footer">
         <p id="copyright" class="copyright footer">
           Copyright &copy; 2027 by The Code Magazine
         </p>

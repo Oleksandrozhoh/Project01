@@ -2,10 +2,11 @@
   /* border: 5px solid red; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   border-top: 20px solid #1098ad;
   /* margin-left: auto;
   margin-right: auto; */
@@ -23,20 +24,17 @@ body {
   /* padding: 20px;
   padding-left: 40px;
   padding-right: 40px; */
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
-aside {
-  background-color: #f7f7f7;
+.aside-section {
+  background-color: #dfdfdf;
   /* border: 5px solid #1098ad; */
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  /* border-left: 5px solid #1098ad;
-  border-right: 5px solid #1098ad; */
-  padding: 50px;
-  margin-right: 200px;
+  padding: 20px;
 }
 
 .article-section {
@@ -63,15 +61,11 @@ h1 {
   font-style: italic;
   text-align: center;
 }
+
 h1::first-letter {
   /* pseudo elements */
   font-style: normal;
   margin-right: 5px;
-}
-
-h3 + p::first-line {
-  /*sibling selector + pseudo element */
-  /* font-weight: bold; */
 }
 
 .article-title::after {
@@ -99,10 +93,11 @@ h3 + p::first-line {
   margin-bottom: 40px;
 }
 
-h4 {
-  font-size: 27px;
+.related-post-header {
+  font-size: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 p {
@@ -130,8 +125,8 @@ li {
 }
 
 p.relatedPostBy {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
+  font-style: italic;
 }
 
 ul,
@@ -139,8 +134,10 @@ ol {
   margin-left: 50px;
   margin-bottom: 20px;
 }
-li.related-posts-list {
+
+ul {
   list-style: none;
+  margin-left: 0;
 }
 
 /*PSEUDO CLASSES*/
@@ -201,12 +198,12 @@ nav {
 
 .related-post-title {
   color: #1098ad;
-  font-style: bold;
+  font-weight: bold;
 }
 
 .mdn-web-docs {
   color: #1098ad;
-  font-style: bold;
+  font-weight: bold;
 }
 
 /* css conflicta = multiple stylings applied to the same element */
@@ -245,4 +242,55 @@ footer p {
   position: absolute;
   bottom: 20px;
   right: 10px;
+}
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+.author {
+  /* padding-left: 100px; */
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+nav-link {
+  float: right;
+}
+
+/* SOLVING COLLAPSING HIGHT ISSUE */
+/* .clear {
+  clear: both;
+} */
+
+.clearfix::after {
+  clear: both;
+  content: " ";
+  /* CLEAR WORKS ONLY ON BLOCK ELEMENTS THEREFORE WE HAVE TO MAKE PSEUDO ELEMENT A BLOCK */
+  display: block;
+}
+
+article {
+  /* background-color: green; */
+  width: 825px;
+  float: left;
+}
+
+aside {
+  /* background-color: lightgreen; */
+  width: 250px;
+  float: right;
+}
+
+footer {
+  /* background-color: greenyellow; */
+}
+
+.footer {
+  clear: both;
 }
