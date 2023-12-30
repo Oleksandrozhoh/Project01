@@ -8,16 +8,24 @@
     <style>
       .el--1 {
         background-color: blueviolet;
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        /* height: 150px; */
       }
       .el--2 {
         background-color: orangered;
+        /* height: 150px; */
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
+        grid-column: 1;
+        grid-row: 2;
       }
+
       .el--4 {
         background-color: goldenrod;
+        /* height: 150px; */
       }
       .el--5 {
         background-color: palevioletred;
@@ -30,6 +38,9 @@
       }
       .el--8 {
         background-color: crimson;
+        /* grid-column: 1 / span 4; */
+        grid-column: 1/-1;
+        grid-row: 3;
       }
 
       .container--1 {
@@ -40,6 +51,15 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr auto; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        /* height: 300px; */
+        /* column-gap: 50px;
+        row-gap: 50px; */
+        display: none;
       }
 
       .container--2 {
@@ -47,12 +67,30 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 50px;
+        gap: 10px;
 
         width: 1000px;
-        height: 600px;
+        height: 800px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+
+        /* ALINING TRACKS INSIDE OF THE CONTAINER */
+        justify-content: center;
+        align-content: center;
+
+        /* ALINING ITEMS INSIDE OF THE CELLS */
+        align-items: center;
+        justify-items: center;
+      }
+
+      /* ALIGNING ITEMS INSIDE OF THE GRID INDIVIDUALLY */
+      .el--3 {
+        /* align-self: flex-start; */
+        justify-self: end;
       }
     </style>
   </head>
@@ -64,7 +102,7 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
@@ -76,5 +114,7 @@
       <div class="el el--6">(6)</div>
       <div class="el el--7">(7)</div>
     </div>
+
+    <a href="blog.html">Back to the menu page</a>
   </body>
 </html>
